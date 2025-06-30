@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show Para</title>
+    <style>
+        .para {
+            margin: 10px ;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="togglePara()">Hide Paragraph</button>
+    <p class="para" id="myPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae molestiae hic ea dolorem ipsam asperiores animi ducimus fuga ullam nulla! Alias sequi nobis numquam, rem accusamus ea consequatur blanditiis quasi.</p>
+    <script>
+        let isVisible = true;
+        function togglePara() {
+            const para = document.getElementById('myPara');
+            if (isVisible) {
+                para.style.display = 'none';
+                isVisible = false;
+            } else {
+                para.style.display = 'block';
+                isVisible = true;
+            }
+        }
+    </script>
+</body>
+</html>

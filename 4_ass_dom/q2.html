@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Creation</title>
+    <style>
+        .new-div {
+            margin: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createDiv()">Create Div</button>
+    <script>
+        let count = 0;
+        function createDiv() {
+            count++;
+            const newDiv = document.createElement('div');
+            newDiv.className = 'new-div';
+            newDiv.textContent = `Div ${count}`;
+            document.body.appendChild(newDiv);
+        }
+    </script>
+</body>
+</html>

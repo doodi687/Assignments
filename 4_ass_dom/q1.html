@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme</title>
+    <style>
+        body {
+            transition: all 0.3s;
+            margin: 0;
+            padding: 20px;
+        }
+        .theme-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body">
+    <button class="theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+    <script>
+        let isDark = false;
+        function toggleTheme() {
+            const body = document.getElementById('body');
+            if (isDark) {
+                body.style.backgroundColor = '#fff';
+                body.style.color = '#000';
+                isDark = false;
+            } else {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#fff';
+                isDark = true;
+            }
+        }
+    </script>
+</body>
+</html>

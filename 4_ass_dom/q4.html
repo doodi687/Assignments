@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CSS</title>
+    <style>
+        #colorDiv {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="colorInput" placeholder="Enter color name">
+    <button onclick="changeColor()">Change Color</button>
+    <div id="colorDiv"></div>
+    <script>
+        function changeColor() {
+            const color = document.getElementById('colorInput').value;
+            const div = document.getElementById('colorDiv');
+            div.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
